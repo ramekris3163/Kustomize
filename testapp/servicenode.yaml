@@ -1,0 +1,14 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: the-service-node
+spec:
+  selector:
+    deployment: hello
+  type: NodePort
+  ports:
+    - port: 80
+      # By default and for convenience, the `targetPort` is set to
+      # the same value as the `port` field.
+      targetPort: 80
+
