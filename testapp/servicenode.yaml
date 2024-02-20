@@ -7,7 +7,9 @@ spec:
     deployment: hello
   type: NodePort
   ports:
-    - port: 80
+    - protocol: TCP
+      name: http
+      port: 80
       # By default and for convenience, the `targetPort` is set to
       # the same value as the `port` field.
       targetPort: 80
