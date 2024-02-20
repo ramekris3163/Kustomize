@@ -2,6 +2,8 @@ kind: Service
 apiVersion: v1
 metadata:
   name: the-service-node
+  annotations:
+    service.cilium.io/global: "true"
 spec:
   selector:
     deployment: hello
